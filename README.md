@@ -1,28 +1,48 @@
+# AWS EC2 File Cloud Setup with S3 Storage 🚀
 
-# 📁 FileCloud Deployment on AWS
+This guide provides step-by-step instructions for deploying File Cloud on an AWS EC2 instance while utilizing AWS S3 for scalable, secure storage. Additionally, it includes IAM setup to manage access permissions. 
 
-This repository documents the deployment of FileCloud, an enterprise-grade file sharing solution, within an Amazon Web Services (AWS) environment. The project emphasizes cloud infrastructure, security implementation, and system support planning.
+## Introduction ℹ️
 
-## 🚀 Project Overview
-The main goal of this project was to deploy FileCloud within AWS to simulate an enterprise-grade file sharing solution and demonstrate robust understanding of cloud services and security measures.
+This repository offers a comprehensive walkthrough for setting up File Cloud on an AWS EC2 instance, coupled with S3 storage to ensure reliable and secure data management. The integration of File Cloud with S3 elevates the solution's capabilities by leveraging AWS's robust storage infrastructure.
 
-## 🔑 Key Features
-- **AWS Integration:** Configured an EC2 instance and integrated Amazon S3 storage with FileCloud to ensure robust data security and privacy through encryption measures.
-- **Security Enhancements:** Implemented encryption for data at rest and in transit, established IAM user roles, and formulated a 3-month support plan focusing on sustained functionality and stringent security protocols.
+## Prerequisites 🛠️
 
-## 📂 Contents
-- `Documentation/`: Contains detailed steps and documentation regarding the FileCloud deployment within AWS.
-- `Scripts/`: Includes any scripts or configurations used during the deployment process.
+Ensure you have:
+- An active AWS account 🌐
+- Basic familiarity with AWS services (EC2, S3, IAM) 🧭
+- Access to the AWS Management Console 💻
 
-## 🏁 Getting Started
-Follow the steps outlined in the documentation to deploy FileCloud within an AWS environment. Ensure proper access permissions and configurations according to the provided guidelines.
+## Setup Steps 📋
 
-## 🤝 Support and Contribution
-If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions to enhance the project's security, scalability, or documentation are highly appreciated.
+1. **EC2 Instance Creation**
+    - Launch an EC2 instance via the AWS Management Console, selecting the appropriate AMI and instance type.
+    - Retain the SSH key pair securely for accessing the instance.
 
-## ℹ️ Resources
-- [AWS Documentation](https://docs.aws.amazon.com/?nc2=h_ql_doc_do)
-- [OWASP Incident Response Guidelines](https://owasp.org/www-pdf-archive/Top10ConsiderationsForIncidentResponse.pdf)
+2. **Accessing the EC2 Instance**
+    - Utilize SSH to connect to the EC2 instance using the previously downloaded key pair.
 
-## 📚 References
-- [NIST 800-171 Compliance](https://www.encompassconsultants.com/cui-data-protection/nist800-171-cmmc-consulting?gad_source=1&gclid=CjwKCAiApuCrBhAuEiwA8VJ6Jmhy2lEPuCuIpMvutkQ0R0LjBFP-acOsrG2UTd2n2ARb69k6bLXPhhoCYaoQAvD_BwE)
+3. **File Cloud Installation**
+    - Follow the File Cloud installation instructions designed for EC2 instances.
+    - Adapt the configuration to employ S3 storage instead of local storage.
+
+4. **IAM Configuration**
+    - Generate an IAM user with granular permissions to access the S3 bucket.
+    - Obtain Access and Secret Access Keys for the IAM user.
+
+5. **S3 Bucket Creation**
+    - Create an S3 bucket dedicated to storing File Cloud data.
+    - Configure precise access permissions for the IAM user to interact with the bucket.
+
+6. **File Cloud - S3 Integration**
+    - Update the File Cloud configuration settings to integrate seamlessly with the designated S3 bucket.
+    - Enable AWS-managed encryption for enhanced data security.
+
+## Additional Information ℹ️
+
+- Safeguard sensitive information such as access keys and credentials. 🔒
+- Prioritize AWS best practices for security and access control. 🛡️
+
+## Contributors 👨‍💻
+
+- Pratik Ghawate 
